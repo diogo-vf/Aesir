@@ -6,8 +6,10 @@ export const StatisticCategories = {
 } as const;
 
 export const ItemTypes = {
-
-} as const
+  Consommable: "consommable",
+  Equipment: "equipment",
+  Other: "other",
+} as const;
 
 // Define types
 export type StatisticCategory = (typeof StatisticCategories)[keyof typeof StatisticCategories];
@@ -15,6 +17,7 @@ export type ItemType = (typeof ItemTypes)[keyof typeof ItemTypes];
 
 // Convert keys into string
 export const StatisticTypeKeys = invert(StatisticCategories);
+export const ItemTypeKeys = invert(ItemTypes);
 
 // generic helper
 function invert<T extends Record<string, string>>(obj: T) {
