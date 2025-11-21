@@ -1,6 +1,7 @@
 import type { ItemType, StatisticCategory } from '$enums';
 
-type Character = {
+export type Character = {
+  id: number;
   name: string;
   age: number;
   statistics: {
@@ -12,18 +13,18 @@ type Character = {
   inventory: Inventory;
   equipment: Equipment;
   skills: Skill[];
-  divineBlood: DivineBlood,
-  divineBlessing: DivineBlessing,
+  divineBlood: DivineBlood;
+  divineBlessing: DivineBlessing;
 };
 
-type Statistic = {
+export type Statistic = {
   id: number;
   name: string;
   description: string;
   category: StatisticCategory;
 };
 
-type Item = {
+export type Item = {
   id: number;
   name: string;
   description: string;
@@ -47,19 +48,25 @@ type Equipment = {
   Accessories?: Item[];
 };
 
-type Skill = {
+export type Skill = {
   id: number;
   name: string;
 };
 
-type DivineBlood = {
-  id: number,
-  name: string,
-  description: string,
-}
+export type DivineBlood = {
+  id: number;
+  name: string;
+  description: string;
+};
 
-type DivineBlessing = {
-  id: number,
-  name: string,
-  description: string,
-}
+export type DivineBlessing = {
+  id: number;
+  name: string;
+  description: string;
+};
+
+export type Race = {
+  id: number;
+  name: string;
+  description: string;
+};
