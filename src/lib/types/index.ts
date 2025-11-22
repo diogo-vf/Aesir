@@ -11,11 +11,11 @@ export type Character = {
     statistic: Statistic;
   }[];
   moneys: {
-    bronze: number,
-    argent: number,
-    or: number,
-    mithril: number,
-  },
+    bronze: number;
+    argent: number;
+    or: number;
+    mithril: number;
+  };
   inventory: Inventory;
   equipment: Equipment;
   skills: Skill[];
@@ -47,7 +47,7 @@ export type Item = {
 type Inventory = {
   maxItems: number;
   totalItems: number;
-  items: { item: Item; quantity: number, maxQuantity: number }[];
+  items: { item: Item; quantity: number; maxQuantity: number }[];
 };
 
 type Equipment = {
