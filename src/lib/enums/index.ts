@@ -11,13 +11,31 @@ export const ItemTypes = {
   Other: "other",
 } as const;
 
+export const Materials = {
+  Leather: "leather",
+  Iron: "iron",
+  Steel: "steel",
+  Mithril: "mithril",
+  Adamantium: "adamantium",
+} as const;
+
+export const ItemCategories = {
+  Light: "light",
+  Medium: "medium",
+  Heavy: "heavy"
+} as const;
+
 // Define types
 export type StatisticCategory = (typeof StatisticCategories)[keyof typeof StatisticCategories];
 export type ItemType = (typeof ItemTypes)[keyof typeof ItemTypes];
+export type Material = (typeof Materials)[keyof typeof Materials];
+export type ItemCategory = (typeof ItemCategories)[keyof typeof ItemCategories];
 
 // Convert keys into string
 export const StatisticTypeKeys = invert(StatisticCategories);
 export const ItemTypeKeys = invert(ItemTypes);
+export const MaterialKeys = invert(Materials);
+export const ItemCategoryKeys = invert(ItemCategories);
 
 // generic helper
 function invert<T extends Record<string, string>>(obj: T) {
