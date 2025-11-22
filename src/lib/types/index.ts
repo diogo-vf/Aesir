@@ -36,6 +36,12 @@ export type Item = {
   description: string;
   stackable: boolean;
   type: ItemType;
+  // TODO please confirm me ↓
+  upgraded?: boolean; // Item could be upgraded only once time (please confirm me)
+  rarety: 1 | 2 | 3 | 4 | 5; // 0 common , 5 ultra mega rare
+  material?: Material; // Material define some properties
+  weightCategory?: ItemCategory; // Is it a light, heavy or medium object ? it is realy usefull information ?
+  // TODO Bonus and / or effects to apply to the character. Effects to apply to opponents
 };
 
 type Inventory = {
