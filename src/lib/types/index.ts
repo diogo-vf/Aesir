@@ -10,6 +10,12 @@ export type Character = {
     actual: number;
     statistic: Statistic;
   }[];
+  moneys: {
+    bronze: number,
+    argent: number,
+    or: number,
+    mithril: number,
+  },
   inventory: Inventory;
   equipment: Equipment;
   skills: Skill[];
