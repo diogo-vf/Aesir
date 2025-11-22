@@ -1,4 +1,4 @@
-import type { ItemType, StatisticCategory } from '$enums';
+import type { ItemCategory, ItemType, Material, StatisticCategory } from '$enums';
 
 export type Character = {
   id: number;
@@ -47,7 +47,7 @@ export type Item = {
 type Inventory = {
   maxItems: number;
   totalItems: number;
-  items: { item: Item; quantity: number }[];
+  items: { item: Item; quantity: number, maxQuantity: number }[];
 };
 
 type Equipment = {
