@@ -1,0 +1,19 @@
+[project]
+name = "api"
+version = "0.0.1"
+description = "Aesir's API provides data based on our role-playing universe called Aesir!"
+authors = [
+    {name = "diogo-vf"}
+]
+license = {text = "Apache License 2.0"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi[standard] (>=0.124.2,<0.125.0)",
+    "uvicorn (>=0.38.0,<0.39.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
